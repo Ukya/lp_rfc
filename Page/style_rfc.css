@@ -1,0 +1,112 @@
+body
+{
+	width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: rgb(219, 220, 221);
+}
+
+header
+{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(130, 130, 130);
+    padding: 10px;
+}
+
+#title 
+{
+	background-color: black;
+}
+
+h1
+{
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+section, article
+{
+	background-color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-top: 3px solid black;
+}
+
+footer
+{
+	background-color: rgb(130, 130, 130);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+footer address, footer div
+{
+	padding-bottom: 10px;
+}
+
+#coordonnees
+{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+aside
+{
+	font-size: 10pt;
+}
+
+ol 
+{
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li 
+{
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before 
+{
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li 
+{
+  margin: 0;
+}
+
+li ol > li:before 
+{
+  content: counters(item, ".") " ";
+}
+
+.line{
+    border-bottom:1px dotted black;
+    position:relative;
+    height:16px;
+}
+
+.line span{
+    display:inline-block;
+    position:relative;
+    background:white;
+    bottom:-2px;
+    height:100%;
+    padding:0 5px;
+}
+.line .price{
+    position:absolute;
+    right:0;
+}​
