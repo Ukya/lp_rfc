@@ -66,27 +66,27 @@
     <section>
     	<h2>Table of Contents</h2>
     	<ul>
-    		<ol>1.  Introduction </ol>
-		    <ol>2.  Normative Notation </ol>
-		    <ol>3.  Detailed Specification 
+    		<ol><a href="#C1">1.</a>  Introduction </ol>
+		    <ol><a href="#C2">2.</a>  Normative Notation </ol>
+		    <ol><a href="#C3">3.</a>  Detailed Specification 
 		    	<ul>
-		    		<ol>3.1.  Maximum Transmission Unit </ol>
-				    <ol>3.2.  Frame Format </ol>
-				    <ol>3.3.  Address Configuration </ol>
-				    <ol>3.4.  Multicast </ol>
+		    		<ol><a href="#C3_1">3.1.</a>  Maximum Transmission Unit </ol>
+				    <ol><a href="#C3_2">3.2.</a>  Frame Format </ol>
+				    <ol><a href="#C3_3">3.3.</a>  Address Configuration </ol>
+				    <ol><a href="#C3_4">3.4.</a>  Multicast </ol>
 		    	</ul>
 		    </ol>
-		    <ol>4.  Quality-of-Service Considerations </ol>
-		    <ol>5.  Routing and Tunneling Considerations </ol>
-		    <ol>6.  Multihoming Considerations </ol>
-		    <ol>7.  Internationalization Considerations </ol>
-		    <ol>8.  Security Considerations </ol>
-		    <ol>9.  IANA Considerations </ol>
-		    <ol>10. Acknowledgements </ol>
-		    <ol>11. References 
+		    <ol><a href="#C4">4.</a>  Quality-of-Service Considerations </ol>
+		    <ol><a href="#C5">5.</a>  Routing and Tunneling Considerations </ol>
+		    <ol><a href="#C6">6.</a>  Multihoming Considerations </ol>
+		    <ol><a href="#C7">7.</a>  Internationalization Considerations </ol>
+		    <ol><a href="#C8">8.</a>  Security Considerations </ol>
+		    <ol><a href="#C9">9.</a>  IANA Considerations </ol>
+		    <ol><a href="#C10">10.</a> Acknowledgements </ol>
+		    <ol><a href="#C11">11.</a> References 
 		    	<ul>
-		    		<ol>11.1. Normative References </ol>
-		      		<ol>11.2. Informative References </ol>
+		    		<ol><a href="#C11_1">11.1.</a> Normative References </ol>
+		      		<ol><a href="#C11_2">11.2.</a> Informative References </ol>
 		    	</ul>
 		    </ol>
     	</ul>
@@ -104,7 +104,7 @@
 	-->
 
     <article>
-    	<h2>1.  Introduction</h2>
+    	<h2 id="C1">1.  Introduction</h2>
     	<p>
     		As shown by [RFC6036], many service providers are actively planning
 		    to deploy IPv6 to alleviate the imminent shortage of IPv4 addresses.
@@ -114,18 +114,18 @@
 		    medium, rather than obliging those service providers to migrate to a
 		    different medium.  This document offers such a specification.
     	</p>
-    	<h2>2.  Normative Notation</h2>
+    	<h2 id="C2">2.  Normative Notation</h2>
     	<p>
     		The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 		    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
 		    document are to be interpreted as described in [RFC2119].
     	</p>	
-    	<h2>3.  Detailed Specification</h2>
+    	<h2 id="C3">3.  Detailed Specification</h2>
     	<p>
     		Unless otherwise stated, the provisions of [RFC1149] and [RFC2460]
 	 			apply throughout.
     	</p>
-    	<h3>3.1.  Maximum Transmission Unit</h3>
+    	<h3 id="C3_1">3.1.  Maximum Transmission Unit</h3>
     	<p>
     		As noted in RFC 1149, the MTU is variable, and generally increases
 		    with increased carrier age.  Since the minimum link MTU allowed by
@@ -147,7 +147,7 @@
 		    depending on carrier age, affecting bandwidth-delay product and hence
 		    the performance of TCP.
     	</p>
-    	<h3>3.2.  Frame Format</h3>
+    	<h3 id="C3_2">3.2.  Frame Format</h3>
     	<p>
     		RFC 1149 does not specify the use of any link layer tag such as an
 		    Ethertype or, worse, an OSI Link Layer or SNAP header [RFC1042].
@@ -163,7 +163,7 @@
 		    in the first four bits of every packet, as the only means to
 		    demultiplex a mixture of IPv4 and IPv6 packets.
 		</p>
-		<h3>3.3.  Address Configuration</h3>
+		<h3 id="C3_3">3.3.  Address Configuration</h3>
 		<p>
 			The lack of any form of link layer protocol means that link-local
 		    addresses cannot be formed, as there is no way to address anything
@@ -184,7 +184,7 @@
 		    unnumbered, or a /127 prefix and static addresses MAY be assigned.
 		    See [IPv6-PREFIXLEN] for further discussion.
 		</p>
-		<h3>3.4.  Multicast</h3>
+		<h3 id="C3_4">3.4.  Multicast</h3>
 		<p>
 			RFC 1149 does not specify a multicast address mapping.  It has been
 		    reported that attempts to implement IPv4 multicast delivery have
@@ -193,7 +193,7 @@
 		    mapping has not been specified, to avoid such problems.
 		</p>
 		<section>
-			<h2>4.  Quality-of-Service Considerations</h2>
+			<h2 id="C4">4.  Quality-of-Service Considerations</h2>
 			<p>
 				[RFC2549] is also applicable in the IPv6 case.  However, the author
 			    of RFC 2549 did not take account of the availability of the
@@ -213,7 +213,7 @@
 			    carriers will implement different per-hop behaviors according to RFC
 			    2474.
 			</p>
-			<h2>5.	Routing and Tunneling Considerations</h2>
+			<h2 id="C5">5.	Routing and Tunneling Considerations</h2>
 	    	<p>
 	    		Routing carriers through the territory of similar carriers, without
 			    peering agreements, will sometimes cause abrupt route changes,
@@ -231,7 +231,7 @@
 			    However, the decapsulation mechanism is unclear at the time of this
    				writing.
 	    	</p>
-	    	<h2>6.  Multihoming Considerations</h2>
+	    	<h2 id="C6">6.  Multihoming Considerations</h2>
 	    	<p>
 	    		Some types of carriers are notoriously good at homing.  Surprisingly,
 			    this property is not mentioned in RFC 1149.  Unfortunately, they
@@ -240,7 +240,7 @@
 			    fundamental restriction on the topologies in which both RFC 1149 and
 			    the present specification can be deployed.
 	    	</p>
-	    	<h2>7.  Internationalization Considerations</h2>
+	    	<h2 id="C7">7.  Internationalization Considerations</h2>
 	    	<p>
 	    		In some locations, such as New Zealand, a significant proportion of
 			    carriers are only able to execute short hops, and only at times when
@@ -248,7 +248,7 @@
 			    impact the availability and throughput of the solution in such
 			    locations.
 	    	</p>
-	    	<h2>8.  Security Considerations</h2>
+	    	<h2 id="C8">8.  Security Considerations</h2>
 	    	<p>
 	    		The security considerations of [RFC1149] apply.  In addition, recent
 			    experience suggests that the transmission elements are exposed to
@@ -263,13 +263,13 @@
 			    There is a known risk of infection by the so-called H5N1 virus.
 			    Appropriate detection and quarantine measures MUST be available.
 	    	</p>
-	    	<h2>9.  IANA Considerations</h2>
+	    	<h2 id="C9">9.  IANA Considerations</h2>
 	    	<p>
 	    		This document requests no action by IANA.  However, registry clean-up
 			    may be necessary after interoperability testing, especially if
 			    multicast has been attempted.
 	    	</p>
-	    	<h2>10.  Acknowledgements</h2>
+	    	<h2 id="C10">10.  Acknowledgements</h2>
 	    	<p>
 	    		Steve Deering was kind enough to review this document for conformance
 			    with IPv6 requirements.  We acknowledge in advance the many errata in
@@ -280,8 +280,8 @@
 		</section>
 		
 		<section>
-			<h2>11.  References</h2>
-	    	<h3>11.1.  Normative References</h3>
+			<h2 id="C11">11.  References</h2>
+	    	<h3 id="C11_1">11.1.  Normative References</h3>
 	    	<p>
 	    		[RFC1149]         Waitzman, D., "Standard for the transmission of IP
                     			  datagrams on avian carriers", RFC 1149, April 1990.
@@ -305,7 +305,7 @@
 			                      Mechanisms for IPv6 Hosts and Routers", RFC 4213,
 			                      October 2005.
 	    	</p>
-	    	<h3>11.2.  Informative References</h3>
+	    	<h3 id="C11_2">11.2.  Informative References</h3>
 	    	<p>
 	    		[IPv6-PREFIXLEN]  Kohno, M., Nitzan, B., Bush, R., Matsuzaki, Y.,
 			                      Colitti, L., and T. Narten, "Using 127-bit IPv6

@@ -92,7 +92,7 @@ li ol > li:before
   content: counters(item, ".") " ";
 }
 
-.line{
+/*.line{
     border-bottom:1px dotted black;
     position:relative;
     height:16px;
@@ -109,4 +109,16 @@ li ol > li:before
 .line .price{
     position:absolute;
     right:0;
-}​
+}​*/
+
+a:link 
+{
+  text-decoration: none;
+  color: blue;
+}
+
+a:visited 
+{
+  text-decoration: none;
+  color: blue;
+}
