@@ -1,5 +1,3 @@
-<!-- https://tools.ietf.org/html/rfc1149 -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,27 +9,34 @@
 
 <body>
 
-    <header>
+	<header id="index_head">
+		<h1>Index RFC</h1>
+	</header>
+    
+ 	<div id="search">
 
-    </header>
+ 		<form method="post" action="traitement.php">
+	   		<p>
+	        	<label for="recherche">Recherchez une RFC</label> : <input type="text" name="recherche" id="recherche" />
+	        	<input type="submit" value="Rechercher" />
+	   		</p>
+		</form>
 
-    <div id="title"><h1>A Standard for the Transmission of IP Datagrams on Avian Carriers</h1></div>
+    </div>
 
- 	<section>
+    <section id="liste_rfc">
 
+    	<h2>Liste des RFC</h2>
+    	<ul>
+    		<li><a href="rfc1149.html">RFC 1149 - A Standard for the Transmission of IP Datagrams on Avian Carriers</a></li>
+    		<li><a href="rfc2549.html">RFC 2549 - IP over Avian Carriers with Quality of Service</a></li>
+    		<li><a href="rfc6214.html">RFC 6214 - Adaptation of RFC 1149 for IPv6</a></li>
+    	</ul>
     </section>
 
-    <article>
-
-    </article>
-
-    <section>
-
-    </section>	
- 
- 	<footer>
-
- 	</footer>
+    <footer>
+    	<p>More information on : <a href="https://www.ietf.org">https://www.ietf.org</a></p>
+    </footer>	
 
 </body>
 </html>
